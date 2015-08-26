@@ -7,7 +7,8 @@ Gem::Specification.new do |spec|
   spec.email         = ["dyl.griffith@gmail.com"]
   spec.summary       = %q{Xapian ruby bindings in a gem}
   spec.description   = %q{Xapian ruby bindings in a gem.}
+  spec.extensions    = ['extconf.rb']
 
-  spec.files         = `git ls-files -z`.split("\x0")
+  spec.files         = %w{extconf.rb util.i xapian.rb xapian_wrap.cc xapian_wrap.h}
   spec.require_paths = ["."]
 end
