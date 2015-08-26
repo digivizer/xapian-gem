@@ -3150,6 +3150,8 @@ static int XapianExceptionHandler(string & msg) {
 	msg = e.get_type();
 	msg += ": ";
 	msg += e.get_msg();
+	msg += ": ";
+	msg += e.get_description();
 	try {
 	    // Re-rethrow the previous exception so we can handle the type in a
 	    // fine-grained way, but only in one place to avoid bloating the
